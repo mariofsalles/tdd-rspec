@@ -1,4 +1,4 @@
-describe 'Matchers de Comparação' do
+describe 'Matchers to compare' do
   it '# >' do
   expect(5).to be>1
   end

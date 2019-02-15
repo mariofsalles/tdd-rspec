@@ -1,21 +1,21 @@
-describe 'Matchers Verdadeiro/Falso' do
-  it '#be true' do
+describe 'Matchers true/false' do
+  it '# be true' do
     expect(1.odd?).to be true
   end
 
-  it '#be_truthy' do
+  it '# be_truthy' do
     expect(1.odd?).to be_truthy
   end
 
-  it '#be false' do
+  it '# be false' do
     expect(2.odd?).to be false
   end
 
-  it '#be_falsey' do
+  it '# be_falsey' do
     expect(2.odd?).to be_falsey
   end
 
-  it '#be_nil' do
+  it '# be_nil' do
   expect(defined? x).to be_nil
   end
 end

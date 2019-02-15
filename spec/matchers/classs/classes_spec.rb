@@ -1,4 +1,4 @@
-require 'string_nao_vazia' # para testar a classe StringNaoVazia
+require 'string_not_empty' # para testar a classe StringNaoVazia
 
 describe 'Classes' do
   it '# be_instace_of' do #Exatamente a classe
@@ -6,9 +6,9 @@ describe 'Classes' do
   end
 
   it '# be_kind_of' do #Pode vir por herança
-    str = StringNaoVazia.new
+    str = StringNotEmpty.new
     expect(str).to be_kind_of(String)
-    expect(str).to be_kind_of(StringNaoVazia)
+    expect(str).to be_kind_of(StringNotEmpty)
     expect(10).to be_kind_of(Integer) 
   end
   
@@ -18,9 +18,9 @@ describe 'Classes' do
   end
 
   it '# be_an / be_a' do #Pode vir por herança
-    str = StringNaoVazia.new
+    str = StringNotEmpty.new
     expect(str).to be_an(String)
-    expect(str).to be_an(StringNaoVazia)
+    expect(str).to be_an(StringNotEmpty)
     expect(10).to be_an(Integer) 
   end
 
