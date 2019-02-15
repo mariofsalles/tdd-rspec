@@ -1,5 +1,5 @@
 require 'calculator' # como o arquivo está na pasta lib, não é necessário require relative
-describe Calculator,": Trata-se de uma calculadora" do # irá rodar um teste para a classe calculadora
+describe Calculator do # irá rodar um teste para a classe calculadora
   subject(:calc) { described_class.new()  }
   context '#sum' do
     it 'positives numbs' do
