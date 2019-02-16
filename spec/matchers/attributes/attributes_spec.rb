@@ -1,11 +1,28 @@
 require 'person'
 
 describe 'Attributes' do
-  it '# have_attributes' do
-    person = Person.new
-    person.name = 'Michael'
-    person.age = 20
-    expect(person).to have_attributes(name: start_with('M'), age: (be > 19))
+
+  before(:each) do
+    puts "ANTES DE CADA TESTE"
+    @person = Person.new
   end
-  
+
+  after(:each) do
+    @person.name = 'Sem nome'
+    puts "DEPOIS DE CADA TESTE: #{@person.inspect}" 
+  end
+
+  it '# have_attributes' do
+    @person.name = 'Michael'
+    @person.age = 20
+
+    expect(@person).to have_attributes(name: start_with('M'), age: (be > 19))
+  end
+
+  it '# have_attributes' do
+    @person.name = 'Marcos'
+    @person.age = 25
+
+    expect(@person).to have_attributes(name: start_with('M'), age: (be > 19))
+  end 
 end
